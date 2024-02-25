@@ -1,0 +1,14 @@
+<ul class="list-group" *ngIf="todos.length>0">
+<li class="list-group-item" *ngFor="let todo of todos">
+    {{todo.todoItem}}
+    <div class="text-right">
+        
+        <button class="btn btn-info mr-1">Edit</button>
+        <button class="btn btn-danger" (click)="onclick(todo.id)">Delete</button>
+    </div>
+    
+</li>
+</ul>
+<p class="alert alert-danger" *ngIf="todos.length===0">
+no todo found
+</p>
